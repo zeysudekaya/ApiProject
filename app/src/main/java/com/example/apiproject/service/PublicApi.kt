@@ -1,7 +1,6 @@
 package com.example.apiproject.service
 
-import com.example.apiproject.model.Entries
-import com.example.apiproject.model.Response
+import com.example.apiproject.model.ApiResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 
@@ -10,9 +9,9 @@ interface PublicApi {
     // BASEurl -> https://api.publicapis.org/
     // EXTurl -> entries
     companion object{
-        const val PUBLIC_API = "entries"
+        const val ENTRIES = "entries"
     }
 
-    @GET(PUBLIC_API)
-    fun getData() : Single<Entries>
+    @GET(ENTRIES)
+    fun getData() : Single<ApiResponse>
 }

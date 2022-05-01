@@ -2,8 +2,8 @@ package com.example.apiproject.model
 
 import com.google.gson.annotations.SerializedName
 
-class Entries : ArrayList<Entries.EntriesItem>() {
-	data class EntriesItem(
+class ApiResponse : ArrayList<ApiResponse.ApiResponseItem>() {
+	data class ApiResponseItem(
 
 		@field:SerializedName("Description")
 		val description: String? = null,
