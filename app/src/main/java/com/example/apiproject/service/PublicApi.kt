@@ -1,6 +1,6 @@
 package com.example.apiproject.service
 
-import com.example.apiproject.model.ApiResponse
+import com.example.apiproject.model.Response
 import io.reactivex.Single
 import retrofit2.http.GET
 
@@ -13,5 +13,5 @@ interface PublicApi {
     }
 
     @GET(ENTRIES)
-    fun getData() : Single<ApiResponse>
+    fun getData() : Single<Response>
 }

@@ -5,13 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apiproject.R
-import com.example.apiproject.model.ApiResponse
+import com.example.apiproject.model.Response
 import kotlinx.android.synthetic.main.result_data_item.view.*
 
 
 class apiAdapter : RecyclerView.Adapter<apiAdapter.apiViewHolder>() {
 
-    private var apiDataList: ArrayList<ApiResponse.ApiResponseItem> = arrayListOf()
+    private var apiDataList: ArrayList<Response.EntriesItem> = arrayListOf()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = apiViewHolder(
@@ -27,16 +27,16 @@ class apiAdapter : RecyclerView.Adapter<apiAdapter.apiViewHolder>() {
 
 
     inner class apiViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(s: ApiResponse.ApiResponseItem) {
+        fun bind(s: Response.EntriesItem) {
             itemView.tv_api.text = s.aPI
             itemView.tv_category.text = s.category
             itemView.tv_link.text = s.link
         }
     }
 
-    fun setApiData(s: ArrayList<ApiResponse.ApiResponseItem>) {
+    fun setApiData(listapi: ArrayList<Response.EntriesItem>) {
         apiDataList.clear()
-        apiDataList.addAll(s)
+        apiDataList.addAll(listapi)
         notifyDataSetChanged()
     }
 

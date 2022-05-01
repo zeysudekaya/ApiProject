@@ -1,6 +1,5 @@
 package com.example.apiproject.service
 
-import com.example.apiproject.model.ApiResponse
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -17,7 +16,7 @@ class PublicApiService {
         .build()
         .create(PublicApi::class.java)
 
-    fun getDataService(): Single<ApiResponse> {
+    fun getDataService(): Single<com.example.apiproject.model.Response> {
         return retrofitApi.getData()
     }
 }
