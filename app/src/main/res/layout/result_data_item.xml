@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    app:contentPadding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animals"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_api"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AdoptAPet"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://www.adoptapet.com/public/apis/pet_list.html"
+            android:drawablePadding="20dp"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"/>
+
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
